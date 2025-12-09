@@ -36,7 +36,7 @@ export default async function ToolPage({ params }: { params: { slug: string } })
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 lg:p-8">
           
           <Link href="/" className="text-blue-500 hover:underline mb-6 inline-block">
-            &larr; 返回首页
+            &larr; Back to Home
           </Link>
 
           <h1 className="text-4xl lg:text-5xl font-bold mb-4">{tool.name}</h1>
@@ -45,7 +45,7 @@ export default async function ToolPage({ params }: { params: { slug: string } })
 
           <div className="flex flex-wrap items-center gap-4 mb-6">
             <Link href={tool.website_url} target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition-colors">
-                访问官网 &rarr;
+                Visit Website &rarr;
             </Link>
             <div className="flex flex-wrap gap-2">
                 {tool.tags && tool.tags.map(tag => (
