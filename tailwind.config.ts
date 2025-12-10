@@ -9,11 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#00ffff', // Tech-inspired cyan
-        secondary: '#ff00ff', // Tech-inspired magenta
+        // DaisyUI 提供了主题色，这里我们只保留背景和边框
         background: '#0d1117', // Dark blue-gray background
         card: '#161b22', // Slightly lighter card background
-        border: '#30363d', // Border color
+        border: '#30363d', // 边框色
         textlight: '#e6edf3', // Light text
         textdark: '#c9d1d9', // Darker text
       },
@@ -27,6 +26,11 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require('daisyui'), require('@tailwindcss/typography')],
+  // DaisyUI config
+  daisyui: {
+    themes: ["dark"], // 默认使用 DaisyUI 的 "dark" 主题
+    darkTheme: "dark", // 强制深色模式
+  },
 };
 export default config;
