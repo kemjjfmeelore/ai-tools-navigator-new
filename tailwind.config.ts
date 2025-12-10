@@ -8,14 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        // DaisyUI 提供了主题色，这里我们只保留背景和边框
-        background: '#0d1117', // Dark blue-gray background
-        card: '#161b22', // Slightly lighter card background
-        border: '#30363d', // 边框色
-        textlight: '#e6edf3', // Light text
-        textdark: '#c9d1d9', // Darker text
-      },
       fontFamily: {
         sans: ['"Inter var"', 'sans-serif'], // Modern font
       },
@@ -29,8 +21,8 @@ const config: Config = {
   plugins: [require('daisyui'), require('@tailwindcss/typography')],
   // DaisyUI config
   daisyui: {
-    themes: ["dark"], // 默认使用 DaisyUI 的 "dark" 主题
-    darkTheme: "dark", // 强制深色模式
+    themes: ["cyberpunk"], // 切换到 DaisyUI 的 "cyberpunk" 主题
+    darkTheme: "cyberpunk", // 强制使用 cyberpunk 主题
   },
 };
 export default config;

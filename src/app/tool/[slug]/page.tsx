@@ -33,7 +33,7 @@ export default async function ToolPage({ params }: { params: { slug: string } })
   return (
     <div className="min-h-screen bg-base-100 text-base-content font-sans">
       <main className="container mx-auto p-4 py-8">
-        <div className="card bg-base-200 border border-base-300 rounded-xl shadow-xl p-6 lg:p-8">
+        <div className="card bg-base-200 border border-base-300 rounded-lg shadow-xl p-6 lg:p-8">
           
           <Link href="/" className="text-primary hover:underline mb-6 inline-block">
             &larr; Back to Home
@@ -44,7 +44,7 @@ export default async function ToolPage({ params }: { params: { slug: string } })
           <p className="text-lg text-neutral-content mb-4">{tool.one_liner}</p>
 
           <div className="flex flex-wrap items-center gap-4 mb-6">
-            <Link href={tool.website_url} target="_blank" rel="noopener noreferrer" className="inline-block btn btn-primary btn-outline">
+            <Link href={tool.website_url} target="_blank" rel="noopener noreferrer" className="inline-block btn btn-outline btn-secondary">
                 Visit Website &rarr;
             </Link>
             <div className="flex flex-wrap gap-2">
