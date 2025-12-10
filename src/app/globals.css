@@ -28,5 +28,5 @@ body {
   /* Custom text-glow for cyberpunk */
   .text-glow {
     text-shadow: 0 0 5px var(--fallback-p,oklch(var(--p))), 0 0 10px var(--fallback-p,oklch(var(--p))), 0 0 15px var(--fallback-p,oklch(var(--p)));
-  }`
+  }
 }
