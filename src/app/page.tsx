@@ -1,6 +1,6 @@
 import { getSortedToolsData } from '@/lib/tools';
 import Link from 'next/link';
-import Image from 'next/image'; // Import Image component
+// import Image from 'next/image'; // Image import removed as logos are hidden
 
 export default function Home() {
   const allToolsData = getSortedToolsData();
@@ -16,18 +16,8 @@ export default function Home() {
               {/* Internal link to detail page - covers the main card area */}
               <Link href={`/tool/${tool.slug}`} className="absolute inset-0 z-10" aria-label={`View ${tool.name} Details`}></Link>
               
-              <div className="flex items-center mb-4">
-                {tool.logo_url && (
-                  <Image 
-                    src={tool.logo_url} 
-                    alt={`${tool.name} Logo`} 
-                    width={40} 
-                    height={40} 
-                    className="rounded-full mr-3 border border-primary p-1"
-                  />
-                )}
-                <h2 className="text-3xl font-semibold text-primary group-hover:text-secondary transition-colors duration-300">{tool.name}</h2>
-              </div>
+              {/* Removed Logo display */}
+              <h2 className="text-3xl font-semibold mb-2 text-primary group-hover:text-secondary transition-colors duration-300">{tool.name}</h2>
               
               <p className="text-sm text-neutral-content mb-2">
                 Category: <span className="font-medium text-info">{tool.category}</span>
