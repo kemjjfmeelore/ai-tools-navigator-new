@@ -3,27 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 201, 209, 217; /* 浅灰色文本 */
+  --background-start-rgb: 13, 17, 23; /* 深蓝色调背景 */
+  --background-end-rgb: 13, 17, 23; /* 深蓝色调背景 */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 201, 209, 217;
+    --background-start-rgb: 13, 17, 23;
+    --background-end-rgb: 13, 17, 23;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: rgb(var(--background-start-rgb)); /* 直接使用变量作为背景 */
+  color: rgb(var(--foreground-rgb)); /* 使用变量作为文本颜色 */
 }
 
 @layer utilities {

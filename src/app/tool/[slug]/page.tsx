@@ -31,25 +31,25 @@ export default async function ToolPage({ params }: { params: { slug: string } })
   const tool = await getToolData(params.slug);
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <div className="min-h-screen bg-background text-textlight font-sans">
       <main className="container mx-auto p-4 py-8">
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 lg:p-8">
+        <div className="bg-card border border-border rounded-xl p-6 lg:p-8">
           
-          <Link href="/" className="text-blue-500 hover:underline mb-6 inline-block">
+          <Link href="/" className="text-primary hover:underline mb-6 inline-block">
             &larr; Back to Home
           </Link>
 
-          <h1 className="text-4xl lg:text-5xl font-bold mb-4">{tool.name}</h1>
+          <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-textlight">{tool.name}</h1>
           
-          <p className="text-lg text-gray-600 dark:text-gray-400 mb-4">{tool.one_liner}</p>
+          <p className="text-lg text-textdark mb-4">{tool.one_liner}</p>
 
           <div className="flex flex-wrap items-center gap-4 mb-6">
-            <Link href={tool.website_url} target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition-colors">
+            <Link href={tool.website_url} target="_blank" rel="noopener noreferrer" className="inline-block bg-primary bg-opacity-20 hover:bg-opacity-40 text-primary border border-primary text-base font-bold py-2 px-5 rounded-lg transition-colors duration-300">
                 Visit Website &rarr;
             </Link>
             <div className="flex flex-wrap gap-2">
                 {tool.tags && tool.tags.map(tag => (
-                  <span key={tag} className="bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-100 text-xs font-semibold px-2.5 py-0.5 rounded-full">
+                  <span key={tag} className="bg-secondary bg-opacity-30 text-secondary text-xs font-medium px-3 py-1 rounded-full border border-secondary border-opacity-50">
                     {tag}
                   </span>
                 ))}
