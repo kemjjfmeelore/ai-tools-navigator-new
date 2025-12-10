@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-base-100 text-base-content font-sans">
       <main className="container mx-auto p-4 py-8">
-        <h1 className="text-5xl font-bold mb-10 text-center text-primary tracking-wide">AI Audio & Video Tools Navigator</h1>
+        <h1 className="text-5xl font-bold mb-10 text-center text-primary text-glow tracking-widest">AI Audio & Video Tools Navigator</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {allToolsData.map((tool) => (

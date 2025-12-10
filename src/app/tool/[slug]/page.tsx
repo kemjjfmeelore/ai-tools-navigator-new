@@ -39,7 +39,7 @@ export default async function ToolPage({ params }: { params: { slug: string } })
             &larr; Back to Home
           </Link>
 
-          <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-primary">{tool.name}</h1>
+          <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-primary text-glow tracking-widest">{tool.name}</h1>
           
           <p className="text-lg text-neutral-content mb-4">{tool.one_liner}</p>
 
